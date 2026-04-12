@@ -1,0 +1,57 @@
+// https://www.youtube.com/watch?v=KD1Yo8a_Qis&list=WL&index=2
+
+@keyframes spin {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+.infinite-carousel {
+	margin: toRem(100) auto;
+	width: 90%;
+	// border: toRem(5) solid red;
+	display: flex;
+	position: relative;
+	overflow-x: auto;
+
+	// not use gap! будут скачки
+
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		inset: 0;
+		z-index: 2;
+		background: radial-gradient(circle, rgba(255, 255, 255, 0) 80%, rgb(255, 255, 255) 98%);
+	}
+
+	&::-webkit-scrollbar {
+		//hide scrolbar
+		display: none;
+	}
+	// .infinite-carousel__group
+	&__group {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1em;
+		animation: spin 5s infinite linear;
+
+		// add gap применять падинг вместо
+		padding-right: 1em;
+	}
+	// .infinite-carousel__card
+	&__card {
+		flex: 0 0 5em;
+		height: 5em;
+		padding: 1em;
+		background-color: lightgreen;
+		font-size: 3rem;
+		border-radius: 0.2em;
+		text-align: center;
+		align-content: center;
+	}
+}

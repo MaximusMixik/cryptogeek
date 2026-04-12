@@ -1,0 +1,162 @@
+<!-- <section class="section">
+	<div class="box">
+		<h1> Hello!!</h1>
+	</div>
+
+</section> -->
+<style>
+	body {
+		background-color: black;
+		color: white;
+	}
+</style>
+<pre class="selector"></pre>
+
+<div class="box box--1"></div>
+<div class="box box--2">
+	<div class="box__square box__square--1">Hello</div>
+	<div class="box__square box__square--1">Hello</div>
+	<div class="box__square box__square--2"></div>
+</div>
+
+
+<style>
+	.box {
+		/* min-height: 100vh; */
+		/* block-size: 100vh; */
+		min-block-size: 100vh;
+		display: flex;
+		gap: 20px;
+		/* justify-content: center;
+	align-items: center; */
+	}
+
+
+	.box--1 {
+		background-color: pink;
+	}
+
+	.box--2 {
+		background-color: salmon;
+	}
+
+	.box__square {
+		width: 150px;
+		height: 150px;
+		display: grid;
+		place-items: center;
+		color: white;
+	}
+
+	.box__square {}
+
+	.box__square--1 {
+		background-color: blue;
+		transition: background-color 0.6s ease;
+
+	}
+
+	.box__square--1.red {
+		background-color: red;
+	}
+
+	.box__square--2 {
+		background-color: green;
+		margin-top: 300px;
+	}
+
+	/* 
+	.page {}
+
+	.section {
+		height: 400vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.box {
+		background-color: green;
+		border-radius: 20px;
+		min-height: 100px;
+		min-width: 100px;
+		display: grid;
+		place-items: center;
+		color: white;
+		font-weight: 700;
+	} */
+</style>
+
+
+<!-- new -->
+<!-- text -->
+<section class="section ">
+	<div class="section__container">
+		<h2 class="section__title split-text" aria-hidden="true">
+			Lorem ipsum dolor sit amet <a href="#">nested link</a> elit. Pariatur, quos!
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. A perspiciatis architecto consequatur placeat
+			earum vero!
+		</h2>
+		<p class="sr-only">
+			Lorem ipsum dolor sit amet <a href="#">nested link</a> elit. Pariatur, quos!
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. A perspiciatis architecto consequatur placeat
+			earum vero!
+		</p>
+
+	</div>
+</section>
+<section class="section ">
+	<div class="section__container">
+		<h2 class="section__title split-text">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quos!
+		</h2>
+		<div class="green-box"></div>
+		<div class="test-size" style="height: 50px; width:50px; background-color: blue;"></div>
+
+	</div>
+</section>
+<section class="section  ">
+	<div class="section__container">
+		<h2 class="section__title split-text">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quos!
+		</h2>
+	</div>
+</section>
+<!-- context -->
+<section class="section  ">
+	<div class="section__container gap-16 flex flex-col">
+		<button class="start-last mx-auto bg-red-500 p-4 max-w-fit  rounded-lg">last el action</button>
+		<button class="trigger mx-auto bg-red-500 p-4 max-w-fit  rounded-lg">animation action</button>
+		<div class="flex gap-8">
+			<div class="el one bg-green-400"></div>
+			<div class="el two bg-violet-500"></div>
+			<div class="el three bg-blue-500"></div>
+			<div class="el four bg-gray-500"></div>
+			<div class="el five bg-yellow-500"></div>
+		</div>
+	</div>
+</section>
+<!-- keyframes -->
+<section class="section  ">
+	<div class="section__container gap-16 flex flex-col">
+		<div class="flex gap-8 size-[150px] bg-yellow-300">
+			<div class="keyframe el  bg-green-400"></div>
+		</div>
+	</div>
+</section>
+<!-- scrolltrigger -->
+<section class="section ">
+	<div class="section__container">
+		<h2 class="section__title split-text">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quos!
+		</h2>
+		<div class="green-box"></div>
+	</div>
+</section>
+<section class="section  ">
+	<div class="section__container">
+		<h2 class="section__title split-text">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quos!
+		</h2>
+	</div>
+</section>

@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// @custom-variant dark (&:where(.dark, .dark *));
+
+// test in 4th tailwind
+// @theme {
+// 	--color-chestnut: #973f29;
+// }
+
+// @utility centered-item{
+// 	@apply flex justify-center items-center;
+// }
+// html {
+// 	// @apply text-primary;
+// 	&.no-scroll {
+// 		overflow: hidden;
+// 	}
+
+// 	font-size: 1px;
+
+// 	@media (max-width: 1440px) {
+// 		font-size: calc(100vw * 1px / 1440px);
+// 	}
+
+// 	@media (max-width: 1023px) {
+// 		font-size: calc(100vw * 1px / 768px);
+// 	}
+
+// 	@media (max-width: 640px) {
+// 		font-size: calc(100vw * 1px / 414px);
+// 	}
+// }
+
+.header {
+	@apply bg-white w-full h-[50px] shrink-0;
+}
+.body {
+	@apply bg-green-400 overflow-y-auto;
+	// min-h-0 flex-auto h-full flex flex-col justify-end
+	& .content {
+		@apply h-[500px] bg-violet-400;
+		&:first-child {
+			margin-top: auto;
+		}
+	}
+}
+.body-scroll {
+	@apply flex flex-col;
+	//  justify-end min-h-fit  overflow-y-scroll
+}
+.input {
+	@apply shrink-0 w-full h-[50px]  bg-yellow-400;
+}
+
+body {
+	// font-size: 16rem;
+	@apply min-w-[360rem];
+	//  max-w-[100vw]
+}
+main {
+	@apply overflow-clip;
+}
+
+// .container {
+// 	@apply max-w-xl;
+// }
+
+@layer base {
+	h1,
+	.title-1 {
+		@apply font-medium leading-[0.9] -tracking-[3.2rem];
+		// 		color: var(--accent-subtle-active, #F2E4E4);
+		// font-family: Poppins;
+		// font-size: 80px;
+		// font-style: normal;
+		// letter-spacing: -3.2px;
+		// @apply font-display font-extrabold lg:text-[120rem] sm:text-[72rem] text-[48rem] leading-[95%];
+	}
+	// h3 {
+	// 	@apply text-yellow-600 text-4xl;
+	// }
+}
+
+// @layer
+// @apply
+@layer components {
+	.button {
+		@apply bg-purple-400 px-4 py-2 min-h-12 flex items-center justify-center  font-bold text-white max-w-60 mx-auto rounded-2xl;
+		// .button--transparent
+		&--transparent {
+		}
+	}
+}
+
+// https://ui.shadcn.com/docs/components/button - components library

@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// @custom-variant dark (&:where(.dark, .dark *));
+
+// test in 4th tailwind
+// @theme {
+// 	--color-chestnut: #973f29;
+// }
+
+// @utility centered-item{
+// 	@apply flex justify-center items-center;
+// }
+
+@layer base {
+	h1,
+	.heading-1 {
+		@apply text-green-600 text-7xl;
+	}
+	h3 {
+		@apply text-yellow-600 text-4xl;
+	}
+}
+
+// @layer
+// @apply
+
+@layer components {
+	.btn {
+		@apply bg-purple-400 px-4 py-2 min-h-12 flex items-center justify-center font-mono font-bold text-white max-w-60 mx-auto rounded-2xl;
+	}
+}
+
+// https://ui.shadcn.com/docs/components/button - components library

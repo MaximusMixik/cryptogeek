@@ -1,0 +1,525 @@
+<section class="py-12 my-[200px]">
+	<div class="container grid grid-cols-3 gap-4 items-start  ">
+		<!-- title link -->
+		<div class="p-8 space-y-4 relative isolate ">
+			<h4>
+				<a href="#">
+					<span class="absolute inset-0 z-10 bg-pink-400/25"></span>
+					Lorem, ipsum dolor sit amet consectetur adipisicing.
+				</a>
+			</h4>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, doloremque esse laborum nihil nostrum,
+				dignissimos modi ipsum animi aspernatur mollitia, aperiam perferendis ipsam officia voluptatum eaque sit! Qui,
+				quis sit.
+				Ducimus doloremque rem aperiam reiciendis magnam sapiente in sit eveniet veniam debitis cupiditate ut earum
+				voluptate, aspernatur, alias eaque incidunt deleniti dolorum unde reprehenderit ex aut, eos amet. Iusto,
+				repellendus?</p>
+		</div>
+		<!-- variables(border-radius) -->
+		<div class="[--card-radius:var(--radius-4xl)] [--card-padding:--spacing(4)] rounded-(--card-radius) p-(--card-padding) space-y-(--card-padding) relative isolate bg-pink-400 hover:bg-pink-400/25 duration-500 transition-colors">
+			<div class="rounded-[calc(var(--card-radius)-var(--card-padding))] w-full aspect-video relative overflow-hidden">
+				<img class="absolute inset-0 size-full object-cover " src="@img/placeholder.png" alt="Image">
+			</div>
+			<h4>
+				<a href="#">
+					<span class="absolute inset-0 z-10 "></span>
+					Lorem, ipsum dolor sit amet consectetur adipisicing.
+				</a>
+			</h4>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, doloremque esse laborum nihil nostrum,
+				dignissimos modi ipsum animi aspernatur mollitia, aperiam perferendis ipsam officia voluptatum eaque sit! Qui,
+				quis sit.
+				Ducimus doloremque rem aperiam reiciendis magnam sapiente in sit eveniet veniam debitis cupiditate ut earum
+				voluptate, aspernatur, alias eaque incidunt deleniti dolorum unde reprehenderit ex aut, eos amet. Iusto,
+				repellendus?</p>
+		</div>
+	</div>
+
+</section>
+
+
+<!-- add in style.scss -->
+<section class="tailwind" aria-labelledby="tailwind">
+	<div class="tailwind__container">
+		<!-- 
+			!font size + line height
+			text-base - 16px  1.5lh
+			text-sm 14px  1.6lh
+			
+			!font-weight
+			font-medium
+			
+			!color
+			text-green-400
+			
+			!margin
+			m-10 - 40px 
+			mt-10 - top 40px
+			-mt-10 - top -40px
+			
+			!paddings
+			p-4
+			
+			!borders
+			border-dashed -style
+			border-2  - width
+			border-green-500  - color
+			
+			rounded-3xl
+			
+			!background
+			bg-green-300/30 
+			
+			w-w-1/2 - width  50%
+			
+			 mx-auto - centered
+			
+			 text-center 
+			
+			h-24  height 96px 
+			min-h-24 - min-height 96px 
+			
+			 -->
+		<!-- <h2 class="text-4xl font-bold underline">
+									Hello world!
+								</h2> -->
+		<!-- <p
+									class="text-sm text-green-400 font-medium p-4 border-dashed border-2 border-green-500 rounded-3xl mt-4 bg-green-300/30 w-4/5 mx-auto min-h-24 text-center  ">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, magnam accusantium soluta aliquam,
+									animi debitis quos reprehenderit nihil, eius ex quas!
+								</p> -->
+
+		<!-- 
+				flex	
+			
+				flex 
+				items-center
+				justify-between
+
+				animation
+				hover:text-green-800
+				transition-colors
+				duration-300
+				ease-in-out
+
+				animate-bounce
+
+bg-green-100/20
+
+px-4
+py-2
+rounded-lg 
+shadow-md
+shadow-green-500/80
+animate-bounce
+
+-->
+		<!-- <div class="test-box flex items-center justify-between  p-4 bg-cyan-100/10 rounded-lg">
+			<div
+				class="logo  hover:text-green-800 transition-colors duration-100 ease-in-out cursor-pointer   bg-green-100/20 px-4 py-2 rounded-lg shadow-md shadow-green-500/80 animate-bounce ">
+				LOGO
+			</div>
+			<ul class="flex items-center gap-5 flex-wrap">
+				<li class="">Lorem, ipsum dolor. 1 </li>
+				<li class="">Lorem, ipsum dolor. 2 </li>
+				<li class="">Lorem, ipsum dolor. 3 </li>
+			</ul>
+			<button class="animate-bounce "> Hello</button>
+		</div> -->
+
+		<!-- 
+		grid
+		grid-cols-3
+		gap-6
+
+
+	container
+
+rotate-12 
+-rotate-12
+translate-x-10
+"translate-y-4
+blur-sm
+		 -->
+		<div class="grid grid-cols-3 gap-6 mt-10 text-center container mx-auto">
+			<div class="rotate-12 blur-sm">IMAGE</div>
+			<div class="-rotate-12">IMAGE</div>
+			<div class="contrast-100">IMAGE</div>
+			<div class="translate-x-10 scale-125">IMAGE</div>
+			<div class="translate-y-4">IMAGE</div>
+			<div>IMAGE</div>
+			<div class="hover:animate-ping">IMAGE</div>
+		</div>
+		<!-- form
+		
+		
+		bg-white
+		text-black
+	p-2
+	 bg-slate-600/60
+	  mt-4
+		 rounded
+
+		  border 
+			 border-solid 
+			 border-transparent
+			  hover:border-green-400
+				 duration-400 
+				  ease-linear
+					transition-colors 
+
+					focus-visible:border-green-600 
+
+					outline-none 
+					shadow-none 
+
+			after:w-5
+			after:block
+			after:h-5
+			after:bg-red-800
+	-->
+
+		<form action="#">
+
+			<input type="text" class="p-2 bg-slate-600/60 mt-4 rounded border  border-solid border-transparent hover:border-green-400 duration-400  ease-linear transition-colors focus-visible:border-green-600 outline-none shadow-none block
+			w-52
+			mx-auto
+			after:w-5 after:block after:h-5 after:bg-red-800
+			" placeholder="Enter Your name">
+			<!-- <html class="dark"> -->
+			<!-- styles.new-button -->
+			<button class="dark:bg-pink-600   border rounded-2xl px-4 py-2 mt-4  mx-auto bg-only ">
+				Submit
+			</button>
+		</form>
+
+		<!-- adaptation
+		hidden
+		sm:block
+
+
+
+		bg-only - added in config
+aspect-video - 16 / 9
+		as
+		-->
+	</div>
+</section>
+
+
+
+
+
+
+
+
+<!-- !!! -->
+
+<!-- sizes 1  =  1px * 4 -->
+
+<!--! group peer 
+/name - optional
+/other-name - optional
+-->
+<!-- <div
+	class="group/other-name peer/name grid place-items-center size-40 bg-blue-400 hover:bg-purple-400 transition-colors duration-300 ease-in-out delay-100">
+	<div class="size-10 bg-black transition-colors duration-300 ease-in-out delay-200 group-hover/other-name:bg-red-600">
+	</div>
+	<div class="size-10 bg-black transition-colors duration-300 ease-in-out  group-hover/other-name:bg-blue-600"></div>
+</div>
+<div class="size-40 bg-green-400 peer-hover/name:bg-orange-400 transition-colors duration-500 ease-in-out "></div> -->
+
+<!--! default animations  -->
+<!-- <div class="animate-spin size-fit text-[12rem] origin-center">&circlearrowright;</div>
+<div class="animate-ping text-[12rem]">Like</div>
+<div class="animate-pulse text-[12rem]">Subscribe</div>
+<div class="animate-bounce text-[12rem]">Hit the</div> -->
+
+<!--! layout 
+mobile-first scheme
+0
+add custom size - m - 480px
+sm -  more than - 640
+md -more than - 768 ...
+lg - 1024 
+xl - 1280
+2xl - 1536
+
+PC - first scheme
+max-m: less than 480
+max-sm: less than 640
+max-md: ...
+
+or use custom media-queries-value
+min-[400px]:
+max-[400px]:
+
+sm:max-md:grid-cols-3 ( between 768  and 640 )
+sm:grid-cols-3  ( more 768  )
+min-[400px]::grid-cols-3   ( more 400  )
+-->
+<!-- md:block hidden -->
+<!-- sm:max-md:bg-violet-400   ( between 768  and 640 violet) -->
+<!--! example 1 -->
+<!-- <div class="space-y-2 my-4 max-[1200px]:bg-violet-400">
+	<div
+		class="bg-green-400 sm:bg-yellow-400 md:bg-orange-400 lg:bg-red-400 sm:max-md:bg-violet-400 text-6xl font-bold font-mono">
+		Some text
+	</div>
+	<div
+		class=" mt-10 max-sm:bg-green-400 max-md:bg-yellow-400 max-lg:bg-orange-400 bg-red-400 sm:max-md:bg-violet-400 text-6xl font-bold font-mono">
+		Some text
+	</div>
+	<div class=" mt-10 text-6xl font-bold font-mono max-m:text-center"> TEST</div>
+</div> -->
+<!--! example 2 -->
+
+<!-- <div class="grid grid-cols-2 gap-10 p-5 min-[400px]:grid-cols-3">
+	<div class="w-full aspect-video bg-purple-400 shadow-[0_0_10px_black]"></div>
+	<div class="w-full aspect-video bg-purple-400 shadow-neon"></div>
+	<div class="w-full aspect-video bg-purple-400"></div>
+	<div class="w-full aspect-video bg-purple-400"></div>
+	<div class="w-full aspect-video bg-purple-400"></div>
+	<div class="w-full aspect-video bg-purple-400"></div>
+</div> -->
+
+
+<!--! flex
+	justify-
+	items - 
+	flex-row
+	flex-col
+
+	 space-x-6 - between items x axis
+ -->
+<!-- <div class="flex justify-between  space-x-6  my-5">
+	<div class="size-16 rounded-full bg-blue-500"></div>
+	<div class="size-16 rounded-full bg-orange-500"></div>
+	<div class="size-16 rounded-full bg-green-500"></div>
+</div> -->
+
+
+<!--! grid -->
+<!-- 
+<div class="grid grid-cols-3 gap-10 ">
+	<div class="size-16 rounded-full bg-blue-500"></div>
+	<div class="size-16 rounded-full bg-orange-500"></div>
+	<div class="size-16 rounded-full bg-green-500"></div>
+</div> -->
+
+<!--! dark mode -->
+<button aria-label="Переключить цветовую схему" data-theme-switcher
+	class="flex items-center justify-center p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+	<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 block dark:hidden" viewBox="0 0 20 20" fill="currentColor">
+		<!-- Иконка солнца для светлой темы -->
+		<path fill-rule="evenodd"
+			d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+			clip-rule="evenodd" />
+	</svg>
+	<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden dark:block" viewBox="0 0 20 20" fill="currentColor">
+		<!-- Иконка луны для темной темы -->
+		<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+	</svg>
+</button>
+
+<div class="text-lg font-bold mt-3  text-center  dark:text-white mb-3">
+	Lorem ipsum dolor sit amet.
+</div>
+
+<div
+	class=" shadow-lg drop-shadow-lg text-chestnut shadow-purple-700 ring-1 ring-purple-500 size-30 p-5 dark:text-white my-10">
+	Lorem ipsum
+	dolor sit amet
+	consectetur
+	adipisicing
+	elit. Consequatur
+	ratione, sunt itaque mollitia hic laudantium provident eum libero rerum deleniti nam iste soluta veritatis vitae, odit
+	eligendi quos minus eaque!</div>
+<script>
+	// Класс для управления цветовой схемой
+	class ThemeSwitcher {
+		constructor(options = {}) {
+			this.selector = options.selector || '[data-theme-switcher]';
+			this.darkClass = options.darkClass || 'dark';
+			this.storageKey = options.storageKey || 'theme';
+			this.onToggle = options.onToggle || null;
+			this.button = null;
+
+			// Инициализация
+			this.init();
+		}
+
+		init() {
+			// Немедленное применение темы для избежания мерцания
+			this.applyTheme();
+
+			// После загрузки DOM добавляем обработчики событий
+			if (document.readyState === 'loading') {
+				document.addEventListener('DOMContentLoaded', () => this.setupEventListeners());
+			} else {
+				this.setupEventListeners();
+			}
+		}
+
+		setupEventListeners() {
+			// Находим кнопку переключения темы
+			this.button = document.querySelector(this.selector);
+
+			if (this.button) {
+				// Добавляем обработчик клика
+				this.button.addEventListener('click', () => this.toggle());
+			}
+
+			// Слушаем изменения системных настроек
+			window.matchMedia('(prefers-color-scheme: dark)')
+				.addEventListener('change', (e) => this.handleSystemThemeChange(e));
+		}
+
+		handleSystemThemeChange(e) {
+			// Если пользователь не установил явно тему, следуем системным настройкам
+			if (!localStorage.getItem(this.storageKey)) {
+				document.documentElement.classList.toggle(this.darkClass, e.matches);
+				this.updateButtonAppearance(e.matches);
+			}
+		}
+
+		isDarkMode() {
+			return document.documentElement.classList.contains(this.darkClass);
+		}
+
+		applyTheme() {
+			const userTheme = localStorage.getItem(this.storageKey);
+			const systemDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+			const isDarkMode = userTheme === 'dark' || (!userTheme && systemDarkMode);
+
+			document.documentElement.classList.toggle(this.darkClass, isDarkMode);
+
+			// Обновляем состояние кнопки если она уже существует
+			if (this.button) {
+				this.updateButtonAppearance(isDarkMode);
+			}
+		}
+
+		toggle() {
+			const isDarkMode = this.isDarkMode();
+
+			// Меняем тему на противоположную
+			if (isDarkMode) {
+				localStorage.setItem(this.storageKey, 'light');
+				document.documentElement.classList.remove(this.darkClass);
+			} else {
+				localStorage.setItem(this.storageKey, 'dark');
+				document.documentElement.classList.add(this.darkClass);
+			}
+
+			// Обновляем состояние кнопки
+			this.updateButtonAppearance(!isDarkMode);
+
+			// Вызываем пользовательский обработчик, если он определен
+			if (typeof this.onToggle === 'function') {
+				this.onToggle(!isDarkMode);
+			}
+		}
+
+		updateButtonAppearance(isDarkMode) {
+			if (!this.button) return;
+
+			// Здесь можно обновить внешний вид кнопки
+			// По умолчанию ничего не делаем, так как используем CSS-селекторы
+		}
+
+		// Метод для принудительного переключения на определенную тему
+		setTheme(theme) {
+			if (theme === 'dark') {
+				localStorage.setItem(this.storageKey, 'dark');
+				document.documentElement.classList.add(this.darkClass);
+				this.updateButtonAppearance(true);
+			} else if (theme === 'light') {
+				localStorage.setItem(this.storageKey, 'light');
+				document.documentElement.classList.remove(this.darkClass);
+				this.updateButtonAppearance(false);
+			} else if (theme === 'system') {
+				localStorage.removeItem(this.storageKey);
+				const systemDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+				document.documentElement.classList.toggle(this.darkClass, systemDarkMode);
+				this.updateButtonAppearance(systemDarkMode);
+			}
+
+			// Вызываем пользовательский обработчик, если он определен
+			if (typeof this.onToggle === 'function') {
+				this.onToggle(document.documentElement.classList.contains(this.darkClass));
+			}
+		}
+	}
+
+	// Скрипт для предотвращения мерцания при загрузке
+	// Этот код нужно поместить в head документа
+	(function () {
+		const storageKey = 'theme';
+		const darkClass = 'dark';
+		const userTheme = localStorage.getItem(storageKey);
+		const systemDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+		const isDarkMode = userTheme === 'dark' || (!userTheme && systemDarkMode);
+
+		document.documentElement.classList.toggle(darkClass, isDarkMode);
+	})();
+
+	// Пример использования класса
+	// const themeSwitcher = new ThemeSwitcher({
+	//   selector: '[data-theme-switcher]',
+	//   darkClass: 'dark',
+	//   storageKey: 'theme',
+	//   onToggle: (isDarkMode) => console.log('Тема изменена:', isDarkMode ? 'темная' : 'светлая')
+	// });
+
+	// Пример использования с минимальными параметрами
+	document.addEventListener('DOMContentLoaded', () => {
+		const themeSwitcher = new ThemeSwitcher();
+	});
+</script>
+
+<!--  -->
+
+<h1 class="heading-1">Hello</h1>
+
+<h3>Hello h3</h3>
+<div class="btn">
+	SOME TEXT
+</div>
+
+<div class="my-4 flex flex-col  ml-2 max-w-[180px]">
+	<label class="flex flex-row-reverse items-center"> <input type="checkbox" checked> default</label>
+	<label class="flex flex-row-reverse items-center"> <input type="checkbox" class="accent-pink-500" checked>
+		Custom</label>
+</div>
+
+<!-- fluid text  tailwind 4-->
+<p class="text-[min(10vw, 70px)]">Lorem ipsum dolor sit.</p>
+
+<!-- file https://www.youtube.com/watch?v=6biMWgD6_JY&ab_channel=JavaScriptMastery 48min-->
+
+<!-- custom selection -->
+<p class="selection:bg-green-400 selection:text-white/80">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A id
+	impedit ullam quaerat sapiente veniam obcaecati. Dicta autem accusamus nam?</p>
+
+
+<!-- tailwind accordion https://codepen.io/rockynhatnguyen/pen/wvzzOre -->
+
+
+<!-- mb 4 version -->
+<!-- <div class="fixed inset-0 flex items-center justify-center backdrop-invert backdrop-opacity-10  bg-black/30">
+	<div class="max-w-120 mx-auto  p-10 ring-2 ring-violet-400 bg-white">
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quas illo sit sapiente dolor quibusdam debitis,
+		impedit deleniti. Voluptates, maiores.
+	</div>
+</div> -->
+
+<!-- https://www.youtube.com/watch?v=V4sPnF9__D4&ab_channel=REDGroup 39min -->
+
+
+<div
+	class="container bg-orange-400 min-h-8 py-8 divide-y-4 divide-red-500 bg-gradient-to-r from-red-400 via-blue-600 from-20% via-70%   to-green-500">
+	<div class="bg-blue-500 size-12"></div>
+	<div class="bg-blue-500 size-12"></div>
+	<div class="bg-blue-500 size-12 ring-2 ring-gray-600"></div>
+</div>

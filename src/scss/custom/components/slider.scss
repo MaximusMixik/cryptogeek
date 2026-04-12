@@ -1,0 +1,92 @@
+// https://www.youtube.com/watch?v=gmI5nvzv170&list=WL&index=3
+
+.carousel {
+	width: 90%;
+	overflow-x: auto;
+	margin: toRem(48) auto;
+	display: flex;
+	gap: toRem(16);
+
+	scroll-behavior: smooth;
+	position: relative;
+	anchor-name: --carousel;
+
+	scroll-snap-type: x mandatory;
+	// scroll-padding-inline: toRem(12);
+	scroll-marker-group: after;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	&::scroll-marker-group {
+		display: flex;
+		justify-content: center;
+		gap: toRem(8);
+	}
+	&::scroll-button(left),
+	&::scroll-button(right) {
+		// position: absolute;
+		// top: 50%;
+		// transform: translateY(50%);
+
+		position: fixed;
+		position-anchor: --carousel;
+
+		width: toRem(50);
+		height: toRem(50);
+		font-size: toRem(28);
+		border: none;
+		border-radius: 50%;
+		color: white;
+		background-color: violet;
+		cursor: pointer;
+		&:disabled {
+			opacity: 0.5;
+			cursor: auto;
+		}
+	}
+	&::scroll-button(right) {
+		content: "⇨";
+		// right: 0;
+		position-area: right center;
+		transform: translateX(-50%);
+	}
+	&::scroll-button(left) {
+		content: "⇦";
+		// left: 0;
+		position-area: left center;
+		transform: translateX(50%);
+	}
+
+	// .carousel__card
+	&__card {
+		scroll-snap-align: start;
+
+		// height: toRem(200);
+		background-color: lightblue;
+		padding: toRem(16);
+		border-radius: toRem(12);
+		text-align: center;
+		align-content: center;
+
+		aspect-ratio: 5/3;
+		@media (min-width: $mobileSmall) {
+			flex: 0 0 toRem(200);
+		}
+		@media (max-width: $mobileSmall) {
+			flex: 0 0 100%;
+		}
+
+		&::scroll-marker {
+			content: "";
+			width: toRem(12);
+			height: toRem(12);
+			border-radius: 50%;
+			background-color: lightgray;
+			&:target-current {
+				background-color: violet;
+			}
+		}
+	}
+}

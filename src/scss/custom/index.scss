@@ -1,0 +1,58 @@
+@import "tailwind/tailwind";
+@import "components/index";
+
+// info
+// ==custom media
+
+// @media (max-width: theme("screens.lg")) { }  --max
+
+// @screen lg {@apply ;}  --min
+
+// =============no-scrollbar
+
+// npm install tailwind-scrollbar
+
+// add in tailwind- config
+// 	plugins: [
+// 		require("tailwind-scrollbar"),
+// 	],
+
+//  overflow-auto scrollbar-none     --- use classes
+
+// ==== to childrens
+
+// [&>li>a]:text-sm
+
+// ==== min-max functions
+
+// max-h-[min(100%,_746rem)]
+
+// =======link trick
+// <div class="relative isolate hover:bg-zinc-200/70 ">
+//  <h2 class="text-base font-semibold tracking-tight text-zinc-800">
+//    <a href="#">
+//      <span class="absolute inset-0 z-10"></span>
+//      Crafting a design system for a multiplanetary future
+//    </a>
+//  </h2>
+//  <!-- ...other content -->
+// </div>
+
+// ===========divider borders
+// divide-y-4 divide-red-500
+
+// ===== line-clamp-3 (clip text)
+// ===== truncate(clip text in one line)
+
+// ==============bg-gradient
+// bg-gradient-to-r from-red-400 to-green-500
+
+// bg-gradient-to-r from-red-400 via-blue-600 from-20% via-70%   to-green-500
+
+// outline imitation by box-shadow
+// ring-2 ring-gray-600
+
+// scren reader only  (sr-only) (lg:not-sr-only)
+
+// =========== plugins
+// typography , and add prose to content
