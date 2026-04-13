@@ -1,0 +1,72 @@
+// .loaded,
+[data-watch] {
+	// @apply opacity-0;
+	opacity: 0.2;
+	transition:
+		opacity 0.5s ease-in-out,
+		transform 0.5s ease-in-out;
+	&.top {
+		// @apply -translate-y-[100rem];
+		// transform: translateY(toRem(-100));
+		transform: translateY(toRem(50));
+	}
+	&.bottom {
+		// @apply translate-y-[100rem];
+		// transform: translateY(toRem(100));
+		transform: translateY(toRem(-50));
+	}
+	&.left {
+		// @apply -translate-x-[100rem];
+		// transform: translateX(toRem(-100));
+		transform: translateX(toRem(-50));
+	}
+	&.right {
+		// @apply translate-x-[100rem];
+		// transform: translateX(toRem(100));
+		transform: translateX(toRem(50));
+	}
+
+	&.scale {
+		// @apply scale-90;
+		transform: scale(0.9);
+	}
+	&.delay-1 {
+		// @apply delay-200;
+		transition-delay: 0.2s;
+	}
+	&.delay-2 {
+		// @apply delay-[400ms];
+		transition-delay: 0.4s;
+	}
+	&.delay-3 {
+		// @apply delay-[600ms];
+		transition-delay: 0.6s;
+	}
+	&.delay-4 {
+		// @apply delay-[800ms];
+		transition-delay: 0.8s;
+	}
+	&.delay-5 {
+		// @apply delay-[900ms];
+		transition-delay: 0.9s;
+	}
+	&.delay-6 {
+		// @apply delay-1000;
+		transition-delay: 1.2s;
+	}
+	&.delay-7 {
+		// @apply delay-1000;
+		transition-delay: 1.4s;
+	}
+	&.delay-8 {
+		// @apply delay-1000;
+		transition-delay: 1.6s;
+	}
+	// &.animate,
+	&._watcher-view {
+		// @apply translate-x-0 translate-y-0 scale-100 opacity-100;
+		opacity: 1;
+		transform: scale(1);
+		transform: translate(0);
+	}
+}

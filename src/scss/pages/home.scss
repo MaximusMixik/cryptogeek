@@ -289,7 +289,7 @@
 	}
 	// .media-hero-actions__badge
 	&__badge {
-		position: relative;
+		position: relative !important;
 		@media (max-width: $mobile) {
 			&.badge {
 				padding: toRem(22) toRem(10) toRem(10) toRem(30);
@@ -941,6 +941,14 @@
 			aspect-ratio: 304 / 384;
 			top: toRem(26);
 			left: toRem(49);
+		}
+		&.top {
+			opacity: 1;
+			transform: translateY(toRem(120)) translateX(toRem(60));
+			&._watcher-view {
+				transform: scale(1);
+				transform: translate(0);
+			}
 		}
 	}
 	// .cta__bg
