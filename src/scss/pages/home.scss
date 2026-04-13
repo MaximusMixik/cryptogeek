@@ -955,7 +955,7 @@
 			left: toRem(49);
 		}
 		&.top {
-			opacity: 1;
+			// opacity: 1;
 			transform: translateY(toRem(120)) translateX(toRem(60));
 			&._watcher-view {
 				transform: scale(1);

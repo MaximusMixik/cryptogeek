@@ -1010,7 +1010,6 @@ h6 {
   object-fit: contain
 }
 .cta__man.top {
-  opacity: 1;
   -webkit-transform: translateY(7.5rem) translateX(3.75rem);
   transform: translateY(7.5rem) translateX(3.75rem)
 }
