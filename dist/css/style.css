@@ -140,7 +140,7 @@ html {
   grid-column: 3/4
 }
 [data-watch] {
-  opacity: .2;
+  opacity: 0;
   transition: opacity .5s ease-in-out,-webkit-transform .5s ease-in-out;
   transition: opacity .5s ease-in-out,transform .5s ease-in-out;
   transition: opacity .5s ease-in-out,transform .5s ease-in-out,-webkit-transform .5s ease-in-out
@@ -761,9 +761,7 @@ h6 {
   --speed: 0.8s;
   --speed-top: 0.3s;
   --speed-bottom: 0.3s;
-  position: absolute;
-  -webkit-animation: glitch var(--speed) infinite;
-  animation: glitch var(--speed) infinite
+  position: absolute
 }
 .hero__glitch img {
   width: 100%;
@@ -773,23 +771,33 @@ h6 {
   -ms-interpolation-mode: nearest-neighbor;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: pixelated;
-  background-size: cover;
-  -webkit-filter: drop-shadow(.125rem 0 var(--bg-1)) drop-shadow(-.125rem 0 var(--dop-2));
-  filter: drop-shadow(.125rem 0 var(--bg-1)) drop-shadow(-.125rem 0 var(--dop-2))
+  background-size: cover
 }
-.hero__glitch img:nth-child(2) {
-  -webkit-filter: drop-shadow(.125rem 0 var(--bg-1));
-  filter: drop-shadow(.125rem 0 var(--bg-1));
+.hero__glitch:nth-child(2),
+.hero__glitch:nth-child(3) {
   opacity: .7;
-  left: .25rem;
+  display: none
+}
+.hero__glitch.glitch-active {
+  -webkit-animation: glitch var(--speed) infinite;
+  animation: glitch var(--speed) infinite
+}
+.hero__glitch.glitch-active img {
+  display: block;
+  -webkit-filter: drop-shadow(2px 0 rgba(255, 0, 193, .4)) drop-shadow(-2px 0 rgba(0, 244, 255, .4));
+  filter: drop-shadow(2px 0 rgba(255, 0, 193, .4)) drop-shadow(-2px 0 rgba(0, 244, 255, .4))
+}
+.hero__glitch.glitch-active img:nth-child(2) {
+  left: -.25rem;
+  -webkit-filter: drop-shadow(.125rem 0 red);
+  filter: drop-shadow(.125rem 0 red);
   -webkit-animation: glitch-top var(--speed-top) infinite;
   animation: glitch-top var(--speed-top) infinite
 }
-.hero__glitch img:nth-child(3) {
-  -webkit-filter: drop-shadow(-.125rem 0 var(--dop-2));
-  filter: drop-shadow(-.125rem 0 var(--dop-2));
-  opacity: .7;
-  left: -.25rem;
+.hero__glitch.glitch-active img:nth-child(3) {
+  left: .25rem;
+  -webkit-filter: drop-shadow(-.125rem 0 #00f);
+  filter: drop-shadow(-.125rem 0 #00f);
   -webkit-animation: glitch-bottom var(--speed-bottom) infinite;
   animation: glitch-bottom var(--speed-bottom) infinite
 }
@@ -805,6 +813,8 @@ h6 {
   color: var(--bodi-2)
 }
 .media-hero-actions__badge {
+  pointer-events: all;
+  cursor: pointer;
   position: relative!important
 }
 .media-hero-actions .badge__desc {

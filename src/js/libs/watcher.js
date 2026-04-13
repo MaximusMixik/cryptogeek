@@ -116,7 +116,7 @@ class ScrollWatcher {
 	}
 	// Функція створення нового спостерігача зі своїми налаштуваннями
 	scrollWatcherCreate(configWatcher) {
-		console.log(configWatcher);
+		// console.log(configWatcher);
 		this.observer = new IntersectionObserver((entries, observer) => {
 			entries.forEach(entry => {
 				this.scrollWatcherCallback(entry, observer);
