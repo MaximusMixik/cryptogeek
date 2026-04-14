@@ -652,7 +652,7 @@
             glitchList.forEach(el => {
                 el.classList.remove("glitch-active");
             });
-        }, 1500);
+        }, 7e3);
     }
     class MagneticItem {
         constructor() {

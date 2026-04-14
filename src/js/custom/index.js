@@ -51,7 +51,7 @@ function glitch() {
 		glitchList.forEach(el => {
 			el.classList.remove('glitch-active')
 		});
-	}, 1500)
+	}, 7000)
 }
 
 class MagneticItem {
