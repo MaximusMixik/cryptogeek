@@ -5,11 +5,17 @@
 		content: "";
 		position: absolute;
 		width: 100%;
-		aspect-ratio: 1920 / 2926;
 		left: 0;
 		bottom: 0;
-		background: url(../img/footer-main-bg.png) center bottom / 100% no-repeat;
 		z-index: -1;
+		@media (min-width: $mobile) {
+			aspect-ratio: 1920 / 2926;
+			background: url(../img/footer-bg.png) center bottom / 100% no-repeat;
+		}
+		@media (max-width: $mobile) {
+			aspect-ratio: 360 / 2926;
+			background: url(../img/footer-bg-mob.png) center bottom / 100% no-repeat;
+		}
 	}
 	&__wrapper {
 		margin-inline: auto;
@@ -39,7 +45,7 @@
 	&__inner {
 		position: relative;
 		z-index: 10;
-		background-image: url(../img/footer-bg.jpg);
+		background-image: url(../img/footer-bg-inner.png);
 		background-repeat: no-repeat;
 		background-position: center top;
 		background-size: cover;
