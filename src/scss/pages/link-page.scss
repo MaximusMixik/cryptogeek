@@ -1,6 +1,9 @@
 .contacts {
 	padding-top: toRem(40);
 	padding-bottom: toRem(92);
+	position: relative;
+	z-index: 10;
+	// background-color: red;
 	// .contacts__container
 	&__container {
 	}

@@ -1,13 +1,10 @@
 .footer {
 	position: relative;
-	background: url(../img/footer-main-bg-1.png) center bottom / 100% no-repeat;
-	// z-index: 30;
 	&::before {
 		pointer-events: none;
 		content: "";
 		position: absolute;
 		width: 100%;
-		// height: toRem(2926);
 		aspect-ratio: 1920 / 2926;
 		left: 0;
 		bottom: 0;
@@ -22,6 +19,21 @@
 		}
 		@media (max-width: $mobile) {
 			padding-inline: 16px;
+		}
+	}
+	// .footer__inner-wrap
+	&__inner-wrap {
+		position: relative;
+		margin-inline: auto;
+		// display: none;
+		@media (min-width: $mobile) {
+			max-width: toRem(1200);
+			transform: translateY(toRem(-100));
+		}
+		@media (max-width: $mobile) {
+			max-width: 90%;
+
+			transform: translateY(toRem(-30));
 		}
 	}
 	&__inner {
@@ -294,47 +306,6 @@
 			margin-bottom: 12px;
 		}
 	}
-	&__decor-1,
-	&__decor-2,
-	&__decor-3 {
-		position: absolute;
-	}
-	&__decor-1 {
-		@media (min-width: $mobile) {
-			left: -47px;
-			bottom: -46px;
-		}
-		@media (max-width: $mobile) {
-			width: 36px;
-			height: 46px;
-			left: -7px;
-			bottom: -16px;
-		}
-	}
-	&__decor-2 {
-		@media (min-width: $mobile) {
-			right: -71px;
-			bottom: -27px;
-		}
-		@media (max-width: $mobile) {
-			width: 43px;
-			height: 43px;
-			right: -12px;
-			bottom: -11px;
-		}
-	}
-	&__decor-3 {
-		@media (min-width: $mobile) {
-			bottom: -46px;
-			right: 431px;
-		}
-		@media (max-width: $mobile) {
-			width: 40px;
-			height: 46px;
-			bottom: -22px;
-			right: 184px;
-		}
-	}
 
 	&__info {
 		@media (max-width: $mobile) {
@@ -347,6 +318,270 @@
 	&__contact {
 		@media (max-width: $mobile) {
 			width: 100%;
+		}
+	}
+}
+
+.footer-animation {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	@media (min-width: $mobile) {
+		min-height: toRem(237);
+	}
+	pointer-events: none;
+	@media (max-width: $mobile) {
+		min-height: toRem(30);
+	}
+	// for testing
+	// z-index: 10;
+	// &::before {
+	// 	display: block;
+	// 	content: "";
+	// 	position: absolute;
+	// 	background-color: rgba(red, 0.3);
+	// 	z-index: -1;
+	// 	width: toRem(16);
+	// 	height: toRem(16);
+	// 	top: toRem(0);
+	// 	right: toRem(77);
+	// }
+	picture,
+	img {
+		position: absolute;
+		object-fit: contain;
+		display: block;
+		z-index: 2;
+		& img {
+			position: static;
+		}
+	}
+	& > :nth-child(1) {
+		animation: float-light 3.8s ease-in-out infinite;
+		@media (min-width: $mobile) {
+			bottom: toRem(22);
+			left: 3%;
+			& img {
+				width: toRem(68);
+				height: toRem(68);
+			}
+		}
+		@media (max-width: $mobile) {
+			top: toRem(-16);
+			left: 17%;
+			& img {
+				width: toRem(58);
+				height: toRem(58);
+			}
+		}
+	}
+	& > :nth-child(2) {
+		@media (min-width: $mobile) {
+			top: toRem(-32);
+			width: toRem(165);
+			height: toRem(171);
+			left: 3.7%;
+			animation: float-subtle 4.5s ease-in-out infinite 0.7s;
+		}
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+
+	& > :nth-child(3) {
+		@media (min-width: $mobile) {
+			animation: float-noticeable 5.2s ease-in-out infinite 1.3s;
+			bottom: toRem(-16);
+			left: 7.5%;
+			& img {
+				width: toRem(99);
+				height: toRem(80);
+			}
+		}
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+	& > :nth-child(4) {
+		animation: float-subtle 3.4s ease-in-out infinite 2.1s;
+		@media (min-width: $mobile) {
+			left: 28.3%;
+			bottom: toRem(-8);
+			& img {
+				width: toRem(89);
+				height: toRem(89);
+			}
+		}
+		@media (max-width: $mobile) {
+			right: 15.3%;
+			bottom: toRem(-12);
+			& img {
+				width: toRem(61);
+				height: toRem(61);
+			}
+		}
+	}
+
+	// center
+	& > :nth-child(5) {
+		animation: float-medium 4.8s ease-in-out infinite 0.4s;
+		@media (min-width: $mobile) {
+			bottom: toRem(-28);
+			left: 41.7%;
+			& img {
+				width: toRem(127);
+				height: toRem(98);
+			}
+		}
+		@media (max-width: $mobile) {
+			left: 33%;
+			bottom: toRem(-12);
+			& img {
+				width: toRem(75);
+				height: toRem(65);
+			}
+		}
+	}
+	// right
+	& > :nth-child(6) {
+		@media (min-width: $mobile) {
+			bottom: toRem(22);
+			right: 31.8%;
+			width: toRem(69);
+			height: toRem(69);
+			animation: float-light 3.6s ease-in-out infinite 1.8s;
+		}
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+	& > :nth-child(7) {
+		@media (min-width: $mobile) {
+			animation: float-noticeable 5.5s ease-in-out infinite 0.9s;
+			bottom: toRem(-18);
+			right: 4.9%;
+			& img {
+				width: toRem(99);
+				height: toRem(80);
+			}
+		}
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+	& > :nth-child(8) {
+		@media (min-width: $mobile) {
+			top: toRem(40);
+			right: -1.1%;
+			width: toRem(101);
+
+			height: toRem(110);
+			animation: float-subtle 4.1s ease-in-out infinite 2.5s;
+		}
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+}
+
+.footer-inner-animation {
+	position: absolute;
+	pointer-events: none;
+	@media (min-width: $mobile) {
+		min-height: toRem(107);
+		bottom: toRem(-36);
+		left: toRem(-36);
+		width: calc(100% + (toRem(36) + toRem(62)));
+	}
+	pointer-events: none;
+	@media (max-width: $mobile) {
+		min-height: toRem(36);
+		bottom: toRem(-16);
+		left: 0;
+		width: calc(100% + toRem(12));
+	}
+	// for testing
+	// z-index: 10;
+	// &::before {
+	// 	display: block;
+	// 	content: "";
+	// 	position: absolute;
+	// 	background-color: rgba(red, 0.3);
+	// 	z-index: -1;
+	// 	width: toRem(16);
+	// 	height: toRem(16);
+	// 	top: toRem(0);
+	// 	right: toRem(77);
+	// }
+	picture,
+	img {
+		position: absolute;
+		object-fit: contain;
+		display: block;
+		z-index: 2;
+		& img {
+			position: static;
+		}
+	}
+	& > :nth-child(1) {
+		animation: float-light 3.8s ease-in-out infinite;
+		@media (min-width: $mobile) {
+			top: toRem(-5);
+			left: -1%;
+			& img {
+				width: toRem(96);
+				height: toRem(131);
+			}
+		}
+		@media (max-width: $mobile) {
+			top: toRem(-8);
+			left: 0;
+			& img {
+				width: toRem(44);
+				height: toRem(56);
+			}
+		}
+	}
+	// center
+	& > :nth-child(2) {
+		animation: float-subtle 3.4s ease-in-out infinite 2.1s;
+		@media (min-width: $mobile) {
+			right: 38.3%;
+			bottom: toRem(-8);
+			& img {
+				width: toRem(85);
+				height: toRem(94);
+			}
+		}
+		@media (max-width: $mobile) {
+			right: 38.3%;
+			bottom: 0;
+			& img {
+				width: toRem(28);
+				height: toRem(32);
+			}
+		}
+	}
+
+	// right
+	& > :nth-child(3) {
+		animation: float-medium 4.8s ease-in-out infinite 0.4s;
+		@media (min-width: $mobile) {
+			top: toRem(-8);
+			right: -1%;
+			& img {
+				width: toRem(118);
+				height: toRem(115);
+			}
+		}
+		@media (max-width: $mobile) {
+			top: toRem(-15);
+			right: -2%;
+			& img {
+				width: toRem(58);
+				height: toRem(56);
+			}
 		}
 	}
 }

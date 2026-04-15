@@ -595,7 +595,7 @@ h6 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   pointer-events: none
 }
 .header-animation img,
@@ -631,8 +631,7 @@ h6 {
   animation: float-light 3.9s ease-in-out infinite 3s
 }
 .footer {
-  position: relative;
-  background: url(../img/footer-main-bg-1.webp) center bottom/100% no-repeat
+  position: relative
 }
 .footer::before {
   pointer-events: none;
@@ -646,6 +645,10 @@ h6 {
   z-index: -1
 }
 .footer__wrapper {
+  margin-inline: auto
+}
+.footer__inner-wrap {
+  position: relative;
   margin-inline: auto
 }
 .footer__inner {
@@ -742,10 +745,64 @@ h6 {
   max-width: 320px;
   color: var(--dop-1)
 }
-.footer__decor-1,
-.footer__decor-2,
-.footer__decor-3 {
-  position: absolute
+.footer-animation {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none
+}
+.footer-animation img,
+.footer-animation picture {
+  position: absolute;
+  -o-object-fit: contain;
+  object-fit: contain;
+  display: block;
+  z-index: 2
+}
+.footer-animation img img,
+.footer-animation picture img {
+  position: static
+}
+.footer-animation>:nth-child(1) {
+  -webkit-animation: float-light 3.8s ease-in-out infinite;
+  animation: float-light 3.8s ease-in-out infinite
+}
+.footer-animation>:nth-child(4) {
+  -webkit-animation: float-subtle 3.4s ease-in-out infinite 2.1s;
+  animation: float-subtle 3.4s ease-in-out infinite 2.1s
+}
+.footer-animation>:nth-child(5) {
+  -webkit-animation: float-medium 4.8s ease-in-out infinite .4s;
+  animation: float-medium 4.8s ease-in-out infinite .4s
+}
+.footer-inner-animation {
+  position: absolute;
+  pointer-events: none
+}
+.footer-inner-animation img,
+.footer-inner-animation picture {
+  position: absolute;
+  -o-object-fit: contain;
+  object-fit: contain;
+  display: block;
+  z-index: 2
+}
+.footer-inner-animation img img,
+.footer-inner-animation picture img {
+  position: static
+}
+.footer-inner-animation>:nth-child(1) {
+  -webkit-animation: float-light 3.8s ease-in-out infinite;
+  animation: float-light 3.8s ease-in-out infinite
+}
+.footer-inner-animation>:nth-child(2) {
+  -webkit-animation: float-subtle 3.4s ease-in-out infinite 2.1s;
+  animation: float-subtle 3.4s ease-in-out infinite 2.1s
+}
+.footer-inner-animation>:nth-child(3) {
+  -webkit-animation: float-medium 4.8s ease-in-out infinite .4s;
+  animation: float-medium 4.8s ease-in-out infinite .4s
 }
 @-webkit-keyframes glitch {
   0%,
@@ -1220,7 +1277,9 @@ h6 {
 }
 .contacts {
   padding-top: 2.5rem;
-  padding-bottom: 5.75rem
+  padding-bottom: 5.75rem;
+  position: relative;
+  z-index: 10
 }
 .contacts__bg {
   position: absolute;
@@ -1436,6 +1495,11 @@ h6 {
     max-width: 1272px;
     padding-inline: 36px
   }
+  .footer__inner-wrap {
+    max-width: 75rem;
+    -webkit-transform: translateY(-6.25rem);
+    transform: translateY(-6.25rem)
+  }
   .footer__inner {
     padding: 60px 100px 60px;
     margin-bottom: 80px
@@ -1468,17 +1532,106 @@ h6 {
   .footer__copy-text {
     font-size: 16px
   }
-  .footer__decor-1 {
-    left: -47px;
-    bottom: -46px
+  .footer-animation {
+    min-height: 14.8125rem
   }
-  .footer__decor-2 {
-    right: -71px;
-    bottom: -27px
+  .footer-animation>:nth-child(1) {
+    bottom: 1.375rem;
+    left: 3%
   }
-  .footer__decor-3 {
-    bottom: -46px;
-    right: 431px
+  .footer-animation>:nth-child(1) img {
+    width: 4.25rem;
+    height: 4.25rem
+  }
+  .footer-animation>:nth-child(2) {
+    top: -2rem;
+    width: 10.3125rem;
+    height: 10.6875rem;
+    left: 3.7%;
+    -webkit-animation: float-subtle 4.5s ease-in-out infinite .7s;
+    animation: float-subtle 4.5s ease-in-out infinite .7s
+  }
+  .footer-animation>:nth-child(3) {
+    -webkit-animation: float-noticeable 5.2s ease-in-out infinite 1.3s;
+    animation: float-noticeable 5.2s ease-in-out infinite 1.3s;
+    bottom: -1rem;
+    left: 7.5%
+  }
+  .footer-animation>:nth-child(3) img {
+    width: 6.1875rem;
+    height: 5rem
+  }
+  .footer-animation>:nth-child(4) {
+    left: 28.3%;
+    bottom: -.5rem
+  }
+  .footer-animation>:nth-child(4) img {
+    width: 5.5625rem;
+    height: 5.5625rem
+  }
+  .footer-animation>:nth-child(5) {
+    bottom: -1.75rem;
+    left: 41.7%
+  }
+  .footer-animation>:nth-child(5) img {
+    width: 7.9375rem;
+    height: 6.125rem
+  }
+  .footer-animation>:nth-child(6) {
+    bottom: 1.375rem;
+    right: 31.8%;
+    width: 4.3125rem;
+    height: 4.3125rem;
+    -webkit-animation: float-light 3.6s ease-in-out infinite 1.8s;
+    animation: float-light 3.6s ease-in-out infinite 1.8s
+  }
+  .footer-animation>:nth-child(7) {
+    -webkit-animation: float-noticeable 5.5s ease-in-out infinite .9s;
+    animation: float-noticeable 5.5s ease-in-out infinite .9s;
+    bottom: -1.125rem;
+    right: 4.9%
+  }
+  .footer-animation>:nth-child(7) img {
+    width: 6.1875rem;
+    height: 5rem
+  }
+  .footer-animation>:nth-child(8) {
+    top: 2.5rem;
+    right: -1.1%;
+    width: 6.3125rem;
+    height: 6.875rem;
+    -webkit-animation: float-subtle 4.1s ease-in-out infinite 2.5s;
+    animation: float-subtle 4.1s ease-in-out infinite 2.5s
+  }
+  .footer-inner-animation {
+    min-height: 6.6875rem;
+    bottom: -2.25rem;
+    left: -2.25rem;
+    width: calc(100% + 2.25rem + 3.875rem)
+  }
+  .footer-inner-animation>:nth-child(1) {
+    top: -.3125rem;
+    left: -1%
+  }
+  .footer-inner-animation>:nth-child(1) img {
+    width: 6rem;
+    height: 8.1875rem
+  }
+  .footer-inner-animation>:nth-child(2) {
+    right: 38.3%;
+    bottom: -.5rem
+  }
+  .footer-inner-animation>:nth-child(2) img {
+    width: 5.3125rem;
+    height: 5.875rem
+  }
+  .footer-inner-animation>:nth-child(3) {
+    top: -.5rem;
+    right: -1%
+  }
+  .footer-inner-animation>:nth-child(3) img {
+    width: 7.375rem;
+    height: 7.1875rem
   }
   .hero {
     padding-top: 5.625rem
@@ -1873,6 +2026,11 @@ h6 {
   .footer__wrapper {
     padding-inline: 16px
   }
+  .footer__inner-wrap {
+    max-width: 90%;
+    -webkit-transform: translateY(-1.875rem);
+    transform: translateY(-1.875rem)
+  }
   .footer__inner {
     padding: 1.5rem;
     margin-bottom: 36px
@@ -1939,29 +2097,83 @@ h6 {
     font-size: 12px;
     margin-bottom: 12px
   }
-  .footer__decor-1 {
-    width: 36px;
-    height: 46px;
-    left: -7px;
-    bottom: -16px
-  }
-  .footer__decor-2 {
-    width: 43px;
-    height: 43px;
-    right: -12px;
-    bottom: -11px
-  }
-  .footer__decor-3 {
-    width: 40px;
-    height: 46px;
-    bottom: -22px;
-    right: 184px
-  }
   .footer__info {
     flex-direction: column
   }
   .footer__contact {
     width: 100%
+  }
+  .footer-animation {
+    min-height: 1.875rem
+  }
+  .footer-animation>:nth-child(1) {
+    top: -1rem;
+    left: 17%
+  }
+  .footer-animation>:nth-child(1) img {
+    width: 3.625rem;
+    height: 3.625rem
+  }
+  .footer-animation>:nth-child(2) {
+    display: none
+  }
+  .footer-animation>:nth-child(3) {
+    display: none
+  }
+  .footer-animation>:nth-child(4) {
+    right: 15.3%;
+    bottom: -.75rem
+  }
+  .footer-animation>:nth-child(4) img {
+    width: 3.8125rem;
+    height: 3.8125rem
+  }
+  .footer-animation>:nth-child(5) {
+    left: 33%;
+    bottom: -.75rem
+  }
+  .footer-animation>:nth-child(5) img {
+    width: 4.6875rem;
+    height: 4.0625rem
+  }
+  .footer-animation>:nth-child(6) {
+    display: none
+  }
+  .footer-animation>:nth-child(7) {
+    display: none
+  }
+  .footer-animation>:nth-child(8) {
+    display: none
+  }
+  .footer-inner-animation {
+    min-height: 2.25rem;
+    bottom: -1rem;
+    left: 0;
+    width: calc(100% + .75rem)
+  }
+  .footer-inner-animation>:nth-child(1) {
+    top: -.5rem;
+    left: 0
+  }
+  .footer-inner-animation>:nth-child(1) img {
+    width: 2.75rem;
+    height: 3.5rem
+  }
+  .footer-inner-animation>:nth-child(2) {
+    right: 38.3%;
+    bottom: 0
+  }
+  .footer-inner-animation>:nth-child(2) img {
+    width: 1.75rem;
+    height: 2rem
+  }
+  .footer-inner-animation>:nth-child(3) {
+    top: -.9375rem;
+    right: -2%
+  }
+  .footer-inner-animation>:nth-child(3) img {
+    width: 3.625rem;
+    height: 3.5rem
   }
   .hero {
     padding-top: 4.375rem

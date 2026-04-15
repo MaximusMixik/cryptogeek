@@ -111,12 +111,12 @@
 		transform: translateY(toRem(-14));
 	}
 }
-// !!! add 0.5h on animations + 0.7
+
 .header-animation {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100vw;
+	width: 100%;
 	pointer-events: none;
 
 	@media (min-width: $mobile) {
