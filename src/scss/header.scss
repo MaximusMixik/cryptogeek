@@ -12,16 +12,16 @@
 	@media (max-width: $mobile) {
 		padding-top: toRem(16);
 	}
-	&::before {
-		content: "";
-		pointer-events: none;
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: toRem(231);
-		background: url("../img/header-artefacts.webp") top center / contain no-repeat;
-	}
+	// &::before {
+	// 	content: "";
+	// 	pointer-events: none;
+	// 	position: absolute;
+	// 	left: 0;
+	// 	top: 0;
+	// 	width: 100%;
+	// 	height: toRem(231);
+	// 	background: url("../img/header-artefacts.webp") top center / contain no-repeat;
+	// }
 }
 
 .header-bg {
@@ -29,32 +29,27 @@
 	left: 0;
 	top: 0;
 	width: 100%;
-	height: toRem(1823);
-	-o-object-fit: cover;
-	object-fit: cover;
-	-o-object-position: top;
-	object-position: top;
+	// height: toRem(2738);
+	height: auto;
 	z-index: -1;
+	@media (min-width: $mobile) {
+		aspect-ratio: 1920 / 2738;
+	}
+	@media (max-width: $mobile) {
+		aspect-ratio: 360 / 2562;
+	}
 	& img {
-		display: block;
+		position: absolute;
 		width: 100%;
 		height: 100%;
-		-o-object-fit: cover;
+		inset: 0;
 		object-fit: cover;
-		-o-object-position: center;
-		object-position: center;
 	}
 }
 
 .logo {
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
 	align-items: center;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
 	justify-content: center;
 	margin-inline: auto;
 	@media (min-width: $mobile) {
@@ -65,14 +60,8 @@
 	}
 	& picture {
 		height: 100%;
-		display: -webkit-box;
-		display: -webkit-flex;
 		display: flex;
-		-webkit-box-align: center;
-		-webkit-align-items: center;
 		align-items: center;
-		-webkit-box-pack: center;
-		-webkit-justify-content: center;
 		justify-content: center;
 	}
 	& img,
@@ -89,7 +78,7 @@
 		transform: translateY(0);
 	}
 	50% {
-		transform: translateY(-4px);
+		transform: translateY(toRem(-4));
 	}
 }
 
@@ -99,7 +88,7 @@
 		transform: translateY(0);
 	}
 	50% {
-		transform: translateY(-7px);
+		transform: translateY(toRem(-7));
 	}
 }
 
@@ -109,7 +98,7 @@
 		transform: translateY(0);
 	}
 	50% {
-		transform: translateY(-10px);
+		transform: translateY(toRem(-10));
 	}
 }
 
@@ -119,14 +108,17 @@
 		transform: translateY(0);
 	}
 	50% {
-		transform: translateY(-14px);
+		transform: translateY(toRem(-14));
 	}
 }
 
 .header-animation {
-	position: relative;
+	position: absolute;
+	top: 0;
+	left: 0;
 	min-height: toRem(200);
 	width: 100vw;
+	// pointer-events: none;
 	// &::before {
 	// 	display: block;
 	// 	content: "";
@@ -144,48 +136,50 @@
 		object-fit: contain;
 		display: block;
 		z-index: 2;
+		// display: none;
 		// left
 		&:nth-child(1) {
-			top: toRem(2);
+			top: toRem(22);
 			width: toRem(100);
 			height: toRem(100);
 			left: 0.8%;
 			animation: float-light 3.8s ease-in-out infinite;
+			// display: block;
 		}
 		&:nth-child(2) {
-			bottom: toRem(6);
+			bottom: 0;
 			width: toRem(132);
 			height: toRem(100);
 			left: 6.7%;
 			animation: float-subtle 4.5s ease-in-out infinite 0.7s;
 		}
 		&:nth-child(3) {
-			top: toRem(43);
+			top: toRem(33);
 			width: toRem(162);
 			height: toRem(156);
-			left: 17%;
+			left: 14.5%;
 			animation: float-noticeable 5.2s ease-in-out infinite 1.3s;
 		}
 		&:nth-child(4) {
-			left: 33.7%;
-			bottom: toRem(34);
+			left: 33.3%;
+			bottom: toRem(24);
 			width: toRem(68);
 			height: toRem(68);
 			animation: float-subtle 3.4s ease-in-out infinite 2.1s;
 		}
 		// center
 		&:nth-child(5) {
-			bottom: toRem(34);
+			bottom: toRem(24);
 			width: toRem(126);
 			height: toRem(98);
-			left: 46.7%;
+			left: 45.7%;
 			animation: float-medium 4.8s ease-in-out infinite 0.4s;
 		}
 
 		// right
 		&:nth-child(6) {
-			bottom: toRem(16);
-			right: 27.8%;
+			bottom: toRem(6);
+			right: 25.8%;
 			width: toRem(89);
 			height: toRem(89);
 			animation: float-light 3.6s ease-in-out infinite 1.8s;
@@ -198,21 +192,21 @@
 			animation: float-noticeable 5.5s ease-in-out infinite 0.9s;
 		}
 		&:nth-child(8) {
-			bottom: 0;
+			bottom: toRem(-20);
 			right: 5.9%;
 			width: toRem(99);
 			height: toRem(80);
 			animation: float-subtle 4.1s ease-in-out infinite 2.5s;
 		}
 		&:nth-child(9) {
-			top: toRem(-4);
-			right: 1.2%;
+			top: toRem(-45);
+			right: 1.5%;
 			width: toRem(165);
-			height: toRem(91);
+			height: toRem(171);
 			animation: float-medium 6s ease-in-out infinite 1.1s;
 		}
 		&:nth-child(10) {
-			bottom: toRem(35);
+			bottom: toRem(25);
 			right: 1.5%;
 			width: toRem(69);
 			height: toRem(69);

@@ -469,36 +469,21 @@ h6 {
   background-size: 100%;
   background-position: center top
 }
-.header::before {
-  content: "";
-  pointer-events: none;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 14.4375rem;
-  background: url(../img/header-artefacts.webp) top center/contain no-repeat
-}
 .header-bg {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
-  height: 113.9375rem;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: top;
-  object-position: top;
+  height: auto;
   z-index: -1
 }
 .header-bg img {
-  display: block;
+  position: absolute;
   width: 100%;
   height: 100%;
+  inset: 0;
   -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center;
-  object-position: center
+  object-fit: cover
 }
 .logo {
   display: flex;
@@ -525,8 +510,8 @@ h6 {
     transform: translateY(0)
   }
   50% {
-    -webkit-transform: translateY(-4px);
-    transform: translateY(-4px)
+    -webkit-transform: translateY(-.25rem);
+    transform: translateY(-.25rem)
   }
 }
 @keyframes float-subtle {
@@ -536,8 +521,8 @@ h6 {
     transform: translateY(0)
   }
   50% {
-    -webkit-transform: translateY(-4px);
-    transform: translateY(-4px)
+    -webkit-transform: translateY(-.25rem);
+    transform: translateY(-.25rem)
   }
 }
 @-webkit-keyframes float-light {
@@ -547,8 +532,8 @@ h6 {
     transform: translateY(0)
   }
   50% {
-    -webkit-transform: translateY(-7px);
-    transform: translateY(-7px)
+    -webkit-transform: translateY(-.4375rem);
+    transform: translateY(-.4375rem)
   }
 }
 @keyframes float-light {
@@ -558,8 +543,8 @@ h6 {
     transform: translateY(0)
   }
   50% {
-    -webkit-transform: translateY(-7px);
-    transform: translateY(-7px)
+    -webkit-transform: translateY(-.4375rem);
+    transform: translateY(-.4375rem)
   }
 }
 @-webkit-keyframes float-medium {
@@ -569,8 +554,8 @@ h6 {
     transform: translateY(0)
   }
   50% {
-    -webkit-transform: translateY(-10px);
-    transform: translateY(-10px)
+    -webkit-transform: translateY(-.625rem);
+    transform: translateY(-.625rem)
   }
 }
 @keyframes float-medium {
@@ -580,8 +565,8 @@ h6 {
     transform: translateY(0)
   }
   50% {
-    -webkit-transform: translateY(-10px);
-    transform: translateY(-10px)
+    -webkit-transform: translateY(-.625rem);
+    transform: translateY(-.625rem)
   }
 }
 @-webkit-keyframes float-noticeable {
@@ -591,8 +576,8 @@ h6 {
     transform: translateY(0)
   }
   50% {
-    -webkit-transform: translateY(-14px);
-    transform: translateY(-14px)
+    -webkit-transform: translateY(-.875rem);
+    transform: translateY(-.875rem)
   }
 }
 @keyframes float-noticeable {
@@ -602,12 +587,14 @@ h6 {
     transform: translateY(0)
   }
   50% {
-    -webkit-transform: translateY(-14px);
-    transform: translateY(-14px)
+    -webkit-transform: translateY(-.875rem);
+    transform: translateY(-.875rem)
   }
 }
 .header-animation {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   min-height: 12.5rem;
   width: 100vw
 }
@@ -619,7 +606,7 @@ h6 {
   z-index: 2
 }
 .header-animation img:nth-child(1) {
-  top: .125rem;
+  top: 1.375rem;
   width: 6.25rem;
   height: 6.25rem;
   left: .8%;
@@ -627,7 +614,7 @@ h6 {
   animation: float-light 3.8s ease-in-out infinite
 }
 .header-animation img:nth-child(2) {
-  bottom: .375rem;
+  bottom: 0;
   width: 8.25rem;
   height: 6.25rem;
   left: 6.7%;
@@ -635,32 +622,32 @@ h6 {
   animation: float-subtle 4.5s ease-in-out infinite .7s
 }
 .header-animation img:nth-child(3) {
-  top: 2.6875rem;
+  top: 2.0625rem;
   width: 10.125rem;
   height: 9.75rem;
-  left: 17%;
+  left: 14.5%;
   -webkit-animation: float-noticeable 5.2s ease-in-out infinite 1.3s;
   animation: float-noticeable 5.2s ease-in-out infinite 1.3s
 }
 .header-animation img:nth-child(4) {
-  left: 33.7%;
-  bottom: 2.125rem;
+  left: 33.3%;
+  bottom: 1.5rem;
   width: 4.25rem;
   height: 4.25rem;
   -webkit-animation: float-subtle 3.4s ease-in-out infinite 2.1s;
   animation: float-subtle 3.4s ease-in-out infinite 2.1s
 }
 .header-animation img:nth-child(5) {
-  bottom: 2.125rem;
+  bottom: 1.5rem;
   width: 7.875rem;
   height: 6.125rem;
-  left: 46.7%;
+  left: 45.7%;
   -webkit-animation: float-medium 4.8s ease-in-out infinite .4s;
   animation: float-medium 4.8s ease-in-out infinite .4s
 }
 .header-animation img:nth-child(6) {
-  bottom: 1rem;
-  right: 27.8%;
+  bottom: .375rem;
+  right: 25.8%;
   width: 5.5625rem;
   height: 5.5625rem;
   -webkit-animation: float-light 3.6s ease-in-out infinite 1.8s;
@@ -675,7 +662,7 @@ h6 {
   animation: float-noticeable 5.5s ease-in-out infinite .9s
 }
 .header-animation img:nth-child(8) {
-  bottom: 0;
+  bottom: -1.25rem;
   right: 5.9%;
   width: 6.1875rem;
   height: 5rem;
@@ -683,15 +670,15 @@ h6 {
   animation: float-subtle 4.1s ease-in-out infinite 2.5s
 }
 .header-animation img:nth-child(9) {
-  top: -.25rem;
-  right: 1.2%;
+  top: -2.8125rem;
+  right: 1.5%;
   width: 10.3125rem;
-  height: 5.6875rem;
+  height: 10.6875rem;
   -webkit-animation: float-medium 6s ease-in-out infinite 1.1s;
   animation: float-medium 6s ease-in-out infinite 1.1s
 }
 .header-animation img:nth-child(10) {
-  bottom: 2.1875rem;
+  bottom: 1.5625rem;
   right: 1.5%;
   width: 4.3125rem;
   height: 4.3125rem;
@@ -901,6 +888,10 @@ h6 {
     transform: translate(.0625rem,.0625rem)
   }
 }
+.hero {
+  position: relative;
+  z-index: 2
+}
 .hero__text {
   color: var(--dop-2)
 }
@@ -951,7 +942,8 @@ h6 {
   -ms-interpolation-mode: nearest-neighbor;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: pixelated;
-  background-size: cover
+  -o-object-fit: cover;
+  object-fit: cover
 }
 .hero__glitch:nth-child(2),
 .hero__glitch:nth-child(3) {
@@ -1402,6 +1394,9 @@ h6 {
   .header {
     padding-top: 2.25rem
   }
+  .header-bg {
+    aspect-ratio: 1920/2738
+  }
   .logo {
     max-width: 14.3125rem
   }
@@ -1764,6 +1759,9 @@ h6 {
   }
   .header {
     padding-top: 1rem
+  }
+  .header-bg {
+    aspect-ratio: 360/2562
   }
   .logo {
     max-width: 7.5rem
