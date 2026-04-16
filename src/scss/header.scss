@@ -32,6 +32,7 @@
 	// height: toRem(2738);
 	height: auto;
 	z-index: -1;
+	// display: none; //! remove
 	@media (min-width: $mobile) {
 		aspect-ratio: 1920 / 2738;
 	}

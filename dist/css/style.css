@@ -928,10 +928,19 @@ h6 {
   flex-direction: column;
   align-items: end
 }
+.hero__media-bg {
+  position: absolute
+}
+.hero__media-bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain
+}
 .hero__glitch {
-  --speed: 0.8s;
-  --speed-top: 0.3s;
-  --speed-bottom: 0.3s;
+  --speed: 1.2s;
+  --speed-top: 0.8s;
+  --speed-bottom: 0.7s;
   position: absolute
 }
 .hero__glitch img {
@@ -945,8 +954,8 @@ h6 {
   -o-object-fit: cover;
   object-fit: cover
 }
-.hero__glitch:nth-child(2),
-.hero__glitch:nth-child(3) {
+.hero__glitch>:nth-child(2),
+.hero__glitch>:nth-child(3) {
   opacity: .7;
   display: none
 }
@@ -955,21 +964,15 @@ h6 {
   animation: glitch var(--speed) infinite
 }
 .hero__glitch.glitch-active img {
-  display: block;
-  -webkit-filter: drop-shadow(2px 0 rgba(255, 0, 193, .4)) drop-shadow(-2px 0 rgba(0, 244, 255, .4));
-  filter: drop-shadow(2px 0 rgba(255, 0, 193, .4)) drop-shadow(-2px 0 rgba(0, 244, 255, .4))
+  display: block
 }
 .hero__glitch.glitch-active img:nth-child(2) {
   left: -.25rem;
-  -webkit-filter: drop-shadow(.125rem 0 red);
-  filter: drop-shadow(.125rem 0 red);
   -webkit-animation: glitch-top var(--speed-top) infinite;
   animation: glitch-top var(--speed-top) infinite
 }
 .hero__glitch.glitch-active img:nth-child(3) {
   left: .25rem;
-  -webkit-filter: drop-shadow(-.125rem 0 #00f);
-  filter: drop-shadow(-.125rem 0 #00f);
   -webkit-animation: glitch-bottom var(--speed-bottom) infinite;
   animation: glitch-bottom var(--speed-bottom) infinite
 }
@@ -1045,7 +1048,8 @@ h6 {
 .banner__text {
   display: flex;
   flex-direction: column;
-  height: 100%
+  height: 100%;
+  flex: 1 1 auto
 }
 .banner__title {
   color: var(--text-2)
@@ -1076,7 +1080,8 @@ h6 {
   transform: rotate(180deg);
   transition: -webkit-transform .5s ease;
   transition: transform .5s ease;
-  transition: transform .5s ease,-webkit-transform .5s ease
+  transition: transform .5s ease,-webkit-transform .5s ease;
+  margin-right: 1.5rem
 }
 .accordion-open .banner__btn.primary-btn img {
   -webkit-transform: rotate(360deg);
@@ -1088,7 +1093,7 @@ h6 {
 .banner__list {
   max-height: 0;
   overflow: hidden;
-  transition: max-height .5s ease
+  transition: all .5s ease
 }
 .accordion-open .banner__list {
   max-height: calc-size(-webkit-max-content,size);
@@ -1356,7 +1361,7 @@ h6 {
     width: 2.25rem
   }
   .spollers__body {
-    padding-right: 5rem;
+    padding-right: 2.5rem;
     padding-bottom: 1rem;
     font-size: 1.5rem
   }
@@ -1674,6 +1679,12 @@ h6 {
     justify-content: end;
     aspect-ratio: 670/870
   }
+  .hero__media-bg {
+    width: 89.25rem;
+    aspect-ratio: 1428/726;
+    top: 22%;
+    left: -77%
+  }
   .hero__glitch {
     inset: 0;
     width: 100%;
@@ -1740,21 +1751,22 @@ h6 {
     margin-bottom: 1.5rem
   }
   .banner__btn.primary-btn {
-    max-width: 12.5rem;
-    width: 100%;
+    max-width: -moz-fit-content;
+    max-width: -webkit-fit-content;
+    max-width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
     min-height: 3rem
-  }
-  .banner__btn.primary-btn img {
-    margin: .75rem 1.5rem .75rem 0
   }
   .banner__img {
     padding-block: .75rem
   }
+  .accordion-open .banner__list {
+    padding-top: 2.0625rem
+  }
   .banner__list>:not(:last-child) {
     margin-bottom: 1rem
-  }
-  .banner__list {
-    padding-top: 2.0625rem
   }
   .item-banner {
     border-radius: 1.5rem;
@@ -1895,7 +1907,8 @@ h6 {
   .banner__top {
     flex-direction: column;
     align-items: center;
-    text-align: center
+    text-align: center;
+    min-height: 19.25rem
   }
   .banner__text {
     align-items: center
@@ -2243,6 +2256,12 @@ h6 {
     aspect-ratio: 360/254;
     margin-bottom: -1.25rem
   }
+  .hero__media-bg {
+    width: 28.3125rem;
+    aspect-ratio: 453/340;
+    top: -15%;
+    left: -36%
+  }
   .hero__glitch {
     width: 57%;
     aspect-ratio: 195/254;
@@ -2293,7 +2312,8 @@ h6 {
   }
   .banner {
     padding: 1rem 1rem 1.5rem;
-    border-radius: 1rem
+    border-radius: 1rem;
+    min-height: 21.75rem
   }
   .banner__title:not(:last-child) {
     margin-bottom: .25rem
@@ -2310,17 +2330,19 @@ h6 {
     width: 100%;
     min-height: 2.5rem
   }
-  .banner__btn.primary-btn img {
-    margin: .375rem 1rem .375rem 0
+  .banner__img img {
+    max-height: 6.25rem;
+    -o-object-fit: contain;
+    object-fit: contain
   }
   .banner__img {
     max-width: 100%
   }
+  .accordion-open .banner__list {
+    padding-top: 1.5rem
+  }
   .banner__list>:not(:last-child) {
     margin-bottom: .5rem
-  }
-  .banner__list {
-    padding-top: 1.5rem
   }
   .item-banner {
     border-radius: 1rem;

@@ -72,7 +72,7 @@
 	&__body {
 		color: var(--dop-2);
 		@media (min-width: $mobile) {
-			padding-right: toRem(80);
+			padding-right: toRem(40);
 			padding-bottom: toRem(16);
 			font-size: toRem(24);
 		}
