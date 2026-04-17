@@ -642,18 +642,6 @@
             });
         }
     }
-    function glitch() {
-        const glitchList = document.querySelectorAll("[data-glitch]");
-        if (!glitchList.length) return;
-        glitchList.forEach(el => {
-            el.classList.add("glitch-active");
-        });
-        setTimeout(() => {
-            glitchList.forEach(el => {
-                el.classList.remove("glitch-active");
-            });
-        }, 4e3);
-    }
     class MagneticItem {
         constructor() {
             this.isMobile = window.innerWidth < 768;
@@ -742,7 +730,6 @@
     window.onload = () => {
         new Accordion;
         new MagneticItem;
-        glitch();
     };
     window["FLS"] = false;
     addLoadedClass();

@@ -38,21 +38,21 @@ class Accordion {
 	}
 }
 
-function glitch() {
-	const glitchList = document.querySelectorAll('[data-glitch]')
+// function glitch() {
+// 	const glitchList = document.querySelectorAll('[data-glitch]')
 
-	if (!glitchList.length) return
+// 	if (!glitchList.length) return
 
-	glitchList.forEach(el => {
-		el.classList.add('glitch-active')
-	});
+// 	glitchList.forEach(el => {
+// 		el.classList.add('glitch-active')
+// 	});
 
-	setTimeout(() => {
-		glitchList.forEach(el => {
-			el.classList.remove('glitch-active')
-		});
-	}, 4000)
-}
+// 	setTimeout(() => {
+// 		glitchList.forEach(el => {
+// 			el.classList.remove('glitch-active')
+// 		});
+// 	}, 4000)
+// }
 
 class MagneticItem {
 	constructor() {
@@ -205,5 +205,5 @@ class MagneticItem {
 window.onload = () => {
 	new Accordion()
 	new MagneticItem()
-	glitch()
+	// glitch()
 }

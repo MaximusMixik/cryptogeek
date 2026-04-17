@@ -381,7 +381,7 @@ h3 span,
 h4 span,
 h5 span,
 h6 span {
-  background: radial-gradient(269.88% 1062.85% at -29.33% 100.98%,#7914d2 0,#b45bf3 5.22%,#4416a3 11%,#5813c8 14.75%,#8030d5 19.39%,#7458eb 28.5%,#bc7cfa 46%,#8968f0 56%,#6968e9 63.5%,#8014d2 68.5%,#d46afa 78.5%,#6e77eb 85%,#762be6 93%,#520eb8 100%);
+  background: radial-gradient(157% 1062.85% at -29.33% 100.98%,#7914d2 0,#b45bf3 5.22%,#4416a3 11%,#5813c8 14.75%,#8030d5 19.39%,#7458eb 28.5%,#bc7cfa 46%,#8968f0 56%,#6968e9 63.5%,#8014d2 68.5%,#d46afa 78.5%,#6e77eb 85%,#762be6 93%,#520eb8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -802,92 +802,6 @@ h6 {
   -webkit-animation: float-medium 4.8s ease-in-out infinite .4s;
   animation: float-medium 4.8s ease-in-out infinite .4s
 }
-@-webkit-keyframes glitch {
-  0%,
-  100% {
-    -webkit-transform: translate(0);
-    transform: translate(0)
-  }
-  20%,
-  60% {
-    -webkit-transform: translate(-.125rem,.125rem);
-    transform: translate(-.125rem,.125rem)
-  }
-  40%,
-  80% {
-    -webkit-transform: translate(.125rem,-.125rem);
-    transform: translate(.125rem,-.125rem)
-  }
-}
-@keyframes glitch {
-  0%,
-  100% {
-    -webkit-transform: translate(0);
-    transform: translate(0)
-  }
-  20%,
-  60% {
-    -webkit-transform: translate(-.125rem,.125rem);
-    transform: translate(-.125rem,.125rem)
-  }
-  40%,
-  80% {
-    -webkit-transform: translate(.125rem,-.125rem);
-    transform: translate(.125rem,-.125rem)
-  }
-}
-@-webkit-keyframes glitch-top {
-  0%,
-  100% {
-    clip-path: polygon(0 0,100% 0,100% 25%,0 25%);
-    -webkit-transform: translate(.0625rem,.0625rem);
-    transform: translate(.0625rem,.0625rem)
-  }
-  50% {
-    clip-path: polygon(0 50%,100% 50%,100% 75%,0 75%);
-    -webkit-transform: translate(-.0625rem,-.0625rem);
-    transform: translate(-.0625rem,-.0625rem)
-  }
-}
-@keyframes glitch-top {
-  0%,
-  100% {
-    clip-path: polygon(0 0,100% 0,100% 25%,0 25%);
-    -webkit-transform: translate(.0625rem,.0625rem);
-    transform: translate(.0625rem,.0625rem)
-  }
-  50% {
-    clip-path: polygon(0 50%,100% 50%,100% 75%,0 75%);
-    -webkit-transform: translate(-.0625rem,-.0625rem);
-    transform: translate(-.0625rem,-.0625rem)
-  }
-}
-@-webkit-keyframes glitch-bottom {
-  0%,
-  100% {
-    clip-path: polygon(0 50%,100% 50%,100% 75%,0 75%);
-    -webkit-transform: translate(-.0625rem,-.0625rem);
-    transform: translate(-.0625rem,-.0625rem)
-  }
-  50% {
-    clip-path: polygon(0 75%,100% 75%,100% 100%,0 100%);
-    -webkit-transform: translate(.0625rem,.0625rem);
-    transform: translate(.0625rem,.0625rem)
-  }
-}
-@keyframes glitch-bottom {
-  0%,
-  100% {
-    clip-path: polygon(0 50%,100% 50%,100% 75%,0 75%);
-    -webkit-transform: translate(-.0625rem,-.0625rem);
-    transform: translate(-.0625rem,-.0625rem)
-  }
-  50% {
-    clip-path: polygon(0 75%,100% 75%,100% 100%,0 100%);
-    -webkit-transform: translate(.0625rem,.0625rem);
-    transform: translate(.0625rem,.0625rem)
-  }
-}
 .hero {
   position: relative;
   z-index: 2
@@ -938,9 +852,9 @@ h6 {
   object-fit: contain
 }
 .hero__glitch {
-  --speed: 1.2s;
-  --speed-top: 0.8s;
-  --speed-bottom: 0.7s;
+  width: 100%;
+  height: 100%;
+  inset: 0;
   position: absolute
 }
 .hero__glitch img {
@@ -951,30 +865,8 @@ h6 {
   -ms-interpolation-mode: nearest-neighbor;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: pixelated;
-  -o-object-fit: cover;
-  object-fit: cover
-}
-.hero__glitch>:nth-child(2),
-.hero__glitch>:nth-child(3) {
-  opacity: .7;
-  display: none
-}
-.hero__glitch.glitch-active {
-  -webkit-animation: glitch var(--speed) infinite;
-  animation: glitch var(--speed) infinite
-}
-.hero__glitch.glitch-active img {
-  display: block
-}
-.hero__glitch.glitch-active img:nth-child(2) {
-  left: -.25rem;
-  -webkit-animation: glitch-top var(--speed-top) infinite;
-  animation: glitch-top var(--speed-top) infinite
-}
-.hero__glitch.glitch-active img:nth-child(3) {
-  left: .25rem;
-  -webkit-animation: glitch-bottom var(--speed-bottom) infinite;
-  animation: glitch-bottom var(--speed-bottom) infinite
+  -o-object-fit: contain;
+  object-fit: contain
 }
 .media-hero-actions {
   display: flex;
@@ -1065,6 +957,7 @@ h6 {
 .banner__btn.primary-btn span {
   margin-left: 1rem;
   font-weight: 500;
+  line-height: 1;
   font-size: 1rem;
   color: var(--bodi-1)
 }
@@ -1277,6 +1170,253 @@ h6 {
   -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none;
   color: var(--dop-2)
+}
+.glitch {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  -webkit-animation-name: glitch-anim;
+  animation-name: glitch-anim;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate
+}
+.glitch--man {
+  background-image: url(../img/home/hero/man.webp);
+  -webkit-filter: blur(10%);
+  filter: blur(10%);
+  -webkit-animation-duration: 2s!important;
+  animation-duration: 2s!important;
+  z-index: 2
+}
+@-webkit-keyframes glitch-anim {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    clip-path: polygon(0 2%,100% 2%,100% 5%,0 5%)
+  }
+  2% {
+    clip-path: polygon(0 78%,100% 78%,100% 100%,0 100%);
+    -webkit-transform: translate(-5px);
+    transform: translate(-5px)
+  }
+  6% {
+    clip-path: polygon(0 78%,100% 78%,100% 100%,0 100%);
+    -webkit-transform: translate(5px);
+    transform: translate(5px)
+  }
+  8% {
+    clip-path: polygon(0 78%,100% 78%,100% 100%,0 100%);
+    -webkit-transform: translate(-5px);
+    transform: translate(-5px)
+  }
+  9% {
+    clip-path: polygon(0 78%,100% 78%,100% 100%,0 100%);
+    -webkit-transform: translate(0);
+    transform: translate(0)
+  }
+  10% {
+    clip-path: polygon(0 54%,100% 54%,100% 44%,0 44%);
+    -webkit-transform: translate3d(5px,0,0);
+    transform: translate3d(5px,0,0)
+  }
+  13% {
+    clip-path: polygon(0 54%,100% 54%,100% 44%,0 44%);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+  13.1% {
+    clip-path: polygon(0 0,0 0,0 0,0 0);
+    -webkit-transform: translate3d(5px,0,0);
+    transform: translate3d(5px,0,0)
+  }
+  15% {
+    clip-path: polygon(0 60%,100% 60%,100% 40%,0 40%);
+    -webkit-transform: translate3d(5px,0,0);
+    transform: translate3d(5px,0,0)
+  }
+  20% {
+    clip-path: polygon(0 60%,100% 60%,100% 40%,0 40%);
+    -webkit-transform: translate3d(-5px,0,0);
+    transform: translate3d(-5px,0,0)
+  }
+  20.1% {
+    clip-path: polygon(0 0,0 0,0 0,0 0);
+    -webkit-transform: translate3d(5px,0,0);
+    transform: translate3d(5px,0,0)
+  }
+  25% {
+    clip-path: polygon(0 85%,100% 85%,100% 40%,0 40%);
+    -webkit-transform: translate3d(5px,0,0);
+    transform: translate3d(5px,0,0)
+  }
+  30% {
+    clip-path: polygon(0 85%,100% 85%,100% 40%,0 40%);
+    -webkit-transform: translate3d(-5px,0,0);
+    transform: translate3d(-5px,0,0)
+  }
+  30.1% {
+    clip-path: polygon(0 0,0 0,0 0,0 0)
+  }
+  35% {
+    clip-path: polygon(0 63%,100% 63%,100% 80%,0 80%);
+    -webkit-transform: translate(-5px);
+    transform: translate(-5px)
+  }
+  40% {
+    clip-path: polygon(0 63%,100% 63%,100% 80%,0 80%);
+    -webkit-transform: translate(5px);
+    transform: translate(5px)
+  }
+  45% {
+    clip-path: polygon(0 63%,100% 63%,100% 80%,0 80%);
+    -webkit-transform: translate(-5px);
+    transform: translate(-5px)
+  }
+  50% {
+    clip-path: polygon(0 63%,100% 63%,100% 80%,0 80%);
+    -webkit-transform: translate(0);
+    transform: translate(0)
+  }
+  55% {
+    clip-path: polygon(0 10%,100% 10%,100% 0,0 0);
+    -webkit-transform: translate3d(5px,0,0);
+    transform: translate3d(5px,0,0)
+  }
+  60% {
+    clip-path: polygon(0 10%,100% 10%,100% 0,0 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1
+  }
+  60.1% {
+    clip-path: polygon(0 0,0 0,0 0,0 0);
+    opacity: 1
+  }
+  to {
+    clip-path: polygon(0 0,0 0,0 0,0 0);
+    opacity: 1
+  }
+}
+@keyframes glitch-anim {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    clip-path: polygon(0 2%,100% 2%,100% 5%,0 5%)
+  }
+  2% {
+    clip-path: polygon(0 78%,100% 78%,100% 100%,0 100%);
+    -webkit-transform: translate(-5px);
+    transform: translate(-5px)
+  }
+  6% {
+    clip-path: polygon(0 78%,100% 78%,100% 100%,0 100%);
+    -webkit-transform: translate(5px);
+    transform: translate(5px)
+  }
+  8% {
+    clip-path: polygon(0 78%,100% 78%,100% 100%,0 100%);
+    -webkit-transform: translate(-5px);
+    transform: translate(-5px)
+  }
+  9% {
+    clip-path: polygon(0 78%,100% 78%,100% 100%,0 100%);
+    -webkit-transform: translate(0);
+    transform: translate(0)
+  }
+  10% {
+    clip-path: polygon(0 54%,100% 54%,100% 44%,0 44%);
+    -webkit-transform: translate3d(5px,0,0);
+    transform: translate3d(5px,0,0)
+  }
+  13% {
+    clip-path: polygon(0 54%,100% 54%,100% 44%,0 44%);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+  13.1% {
+    clip-path: polygon(0 0,0 0,0 0,0 0);
+    -webkit-transform: translate3d(5px,0,0);
+    transform: translate3d(5px,0,0)
+  }
+  15% {
+    clip-path: polygon(0 60%,100% 60%,100% 40%,0 40%);
+    -webkit-transform: translate3d(5px,0,0);
+    transform: translate3d(5px,0,0)
+  }
+  20% {
+    clip-path: polygon(0 60%,100% 60%,100% 40%,0 40%);
+    -webkit-transform: translate3d(-5px,0,0);
+    transform: translate3d(-5px,0,0)
+  }
+  20.1% {
+    clip-path: polygon(0 0,0 0,0 0,0 0);
+    -webkit-transform: translate3d(5px,0,0);
+    transform: translate3d(5px,0,0)
+  }
+  25% {
+    clip-path: polygon(0 85%,100% 85%,100% 40%,0 40%);
+    -webkit-transform: translate3d(5px,0,0);
+    transform: translate3d(5px,0,0)
+  }
+  30% {
+    clip-path: polygon(0 85%,100% 85%,100% 40%,0 40%);
+    -webkit-transform: translate3d(-5px,0,0);
+    transform: translate3d(-5px,0,0)
+  }
+  30.1% {
+    clip-path: polygon(0 0,0 0,0 0,0 0)
+  }
+  35% {
+    clip-path: polygon(0 63%,100% 63%,100% 80%,0 80%);
+    -webkit-transform: translate(-5px);
+    transform: translate(-5px)
+  }
+  40% {
+    clip-path: polygon(0 63%,100% 63%,100% 80%,0 80%);
+    -webkit-transform: translate(5px);
+    transform: translate(5px)
+  }
+  45% {
+    clip-path: polygon(0 63%,100% 63%,100% 80%,0 80%);
+    -webkit-transform: translate(-5px);
+    transform: translate(-5px)
+  }
+  50% {
+    clip-path: polygon(0 63%,100% 63%,100% 80%,0 80%);
+    -webkit-transform: translate(0);
+    transform: translate(0)
+  }
+  55% {
+    clip-path: polygon(0 10%,100% 10%,100% 0,0 0);
+    -webkit-transform: translate3d(5px,0,0);
+    transform: translate3d(5px,0,0)
+  }
+  60% {
+    clip-path: polygon(0 10%,100% 10%,100% 0,0 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1
+  }
+  60.1% {
+    clip-path: polygon(0 0,0 0,0 0,0 0);
+    opacity: 1
+  }
+  to {
+    clip-path: polygon(0 0,0 0,0 0,0 0);
+    opacity: 1
+  }
 }
 .contacts {
   padding-top: 2.5rem;
@@ -1684,11 +1824,6 @@ h6 {
     aspect-ratio: 1428/726;
     top: 22%;
     left: -77%
-  }
-  .hero__glitch {
-    inset: 0;
-    width: 100%;
-    height: 100%
   }
   .media-hero-actions {
     max-width: 18.75rem;
@@ -2253,8 +2388,8 @@ h6 {
     order: 3;
     justify-content: start;
     padding-top: .9375rem;
-    aspect-ratio: 360/254;
-    margin-bottom: -1.25rem
+    aspect-ratio: 328/231;
+    margin-bottom: -3.125rem
   }
   .hero__media-bg {
     width: 28.3125rem;
@@ -2264,9 +2399,8 @@ h6 {
   }
   .hero__glitch {
     width: 57%;
-    aspect-ratio: 195/254;
     bottom: 0;
-    left: -1.875rem
+    left: -.75rem
   }
   .media-hero-actions {
     max-width: 12.5rem;
