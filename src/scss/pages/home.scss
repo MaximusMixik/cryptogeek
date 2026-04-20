@@ -1121,6 +1121,21 @@
 	text-align: center;
 	position: relative;
 
+	&::before {
+		border-radius: toRem(40);
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			& .button-cta__text,
+			& .button-cta__price {
+				color: white;
+				span {
+					color: white;
+				}
+			}
+		}
+	}
 	@media (min-width: $mobile) {
 		min-height: toRem(80);
 		// padding: toRem(10) toRem(16);
@@ -1137,6 +1152,15 @@
 		inset: 0;
 		z-index: -1;
 		object-fit: contain;
+	}
+	&__text,
+	&__price {
+		position: relative;
+		z-index: 2;
+		transition: color 0.3s ease;
+		& span {
+			transition: color 0.3s ease;
+		}
 	}
 	// .button-cta__text
 	&__text {
