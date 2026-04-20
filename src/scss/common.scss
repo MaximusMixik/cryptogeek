@@ -194,6 +194,79 @@ h6 {
 // 	}
 // }
 
+// .primary-btn {
+// 	color: var(--bodi-1);
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: space-between;
+// 	border-radius: toRem(24);
+
+// 	background:
+// 		linear-gradient(18deg, #1a1634, #080815),
+// 		radial-gradient(
+// 			269.88% 1062.85% at -29.33% 100.98%,
+// 			#7914d2 0%,
+// 			#b45bf3 5.22%,
+// 			#4416a3 11%,
+// 			#5813c8 14.75%,
+// 			#8030d5 19.39%,
+// 			#7458eb 28.5%,
+// 			#bc7cfa 46%,
+// 			#8968f0 56%,
+// 			#6968e9 63.5%,
+// 			#8014d2 68.5%,
+// 			#d46afa 78.5%,
+// 			#6e77eb 85%,
+// 			#762be6 93%,
+// 			#520eb8 100%
+// 		);
+// 	background-origin: border-box;
+// 	background-clip: content-box, border-box;
+// 	padding: toRem(1);
+// 	position: relative;
+// 	cursor: pointer;
+// 	@media (min-width: $mobile) {
+// 		font-size: toRem(16);
+// 	}
+
+// 	&::before {
+// 		content: "";
+// 		transition: opacity 0.3s ease;
+// 		position: absolute;
+// 		width: 100%;
+// 		height: 100%;
+// 		inset: 0;
+// 		border-radius: toRem(24);
+// 		border: toRem(1) solid #7914d2;
+// 		opacity: 0;
+// 		background: linear-gradient(135deg, #7914d2 0%, #b45bf3 25%, #8968f0 50%, #c25bf9 75%, #520eb8 100%);
+// 		color: white;
+// 		z-index: 1;
+// 	}
+// 	@media (any-hover: hover) {
+// 		&:hover {
+// 			&::before {
+// 				opacity: 1;
+// 			}
+// 		}
+// 	}
+
+// 	span {
+// 		position: relative;
+// 		z-index: 2;
+// 		// margin-left: toRem(24);
+// 	}
+
+// 	// span .mobile-hide {
+// 	// 	margin-left: 0;
+// 	// }
+// 	// img {
+// 	// 	margin: toRem(10.5) 0;
+// 	// 	margin-right: toRem(24);
+// 	// 	margin-left: toRem(12);
+// 	// }
+// }
+
 .primary-btn {
 	color: var(--bodi-1);
 	display: flex;
@@ -222,16 +295,19 @@ h6 {
 		);
 	background-origin: border-box;
 	background-clip: content-box, border-box;
+	background-size: 280% auto;
+	background-position: left center;
 	padding: toRem(1);
 	position: relative;
 	cursor: pointer;
+	transition: 0.8s;
 	@media (min-width: $mobile) {
 		font-size: toRem(16);
 	}
 
 	&::before {
 		content: "";
-		transition: opacity 0.3s ease;
+		transition: opacity 0.8s ease;
 		position: absolute;
 		width: 100%;
 		height: 100%;
@@ -245,6 +321,7 @@ h6 {
 	}
 	@media (any-hover: hover) {
 		&:hover {
+			background-position: right center;
 			&::before {
 				opacity: 1;
 			}
@@ -254,17 +331,7 @@ h6 {
 	span {
 		position: relative;
 		z-index: 2;
-		// margin-left: toRem(24);
 	}
-
-	// span .mobile-hide {
-	// 	margin-left: 0;
-	// }
-	// img {
-	// 	margin: toRem(10.5) 0;
-	// 	margin-right: toRem(24);
-	// 	margin-left: toRem(12);
-	// }
 }
 .socials {
 	display: -webkit-box;
